@@ -1,0 +1,236 @@
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dp {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #6e8efb;
+    transition: all 0.3s ease;
+  }
+  
+  .dp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(110, 142, 251, 0.5);
+  }
+  
+  .dpicn {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    z-index: 1000;
+    overflow: hidden;
+    transform-origin: top right;
+    animation: scaleIn 0.2s ease-out;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    position: relative;
+  }
+  
+  .profile-header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(110, 142, 251, 0.2), transparent);
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: #6e8efb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 15px;
+    overflow: hidden;
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .user-info h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .user-title {
+    margin: 3px 0;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    margin-right: 6px;
+  }
+  
+  .profile-info-section {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Styles des icônes Unicode */
+  .info-icon::before,
+  .menu-icon::before {
+    font-size: 18px;
+    margin-right: 12px;
+  }
+  
+  .mail-icon::before {
+    content: "✉";
+    color: #6e8efb;
+  }
+  
+  .phone-icon::before {
+    content: "📞";
+    color: #6e8efb;
+  }
+  
+  .bio-icon::before {
+    content: "📝";
+    color: #6e8efb;
+  }
+  
+  .user-icon::before {
+    content: "👤";
+  }
+  
+  .portfolio-icon::before {
+    content: "💼";
+  }
+  
+  .location-icon::before {
+    content: "📍";
+  }
+  
+  .settings-icon::before {
+    content: "⚙️";
+  }
+  
+  .logout-icon::before {
+    content: "🚪";
+  }
+  
+  .info-label {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .info-value {
+    margin: 3px 0 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .bio-item .info-value {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .profile-nav {
+    padding: 10px 0;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    border: none;
+    background: none;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9ff;
+    color: #6e8efb;
+  }
+  
+  .dropdown-item:hover .menu-icon::before {
+    transform: scale(1.1);
+  }
+  
+  .edit-icon {
+    margin-left: auto;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  
+  .dropdown-item.logout {
+    color: #ff4d4f;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 5px;
+  }
+  
+  .dropdown-item.logout .menu-icon::before {
+    color: #ff4d4f;
+  }

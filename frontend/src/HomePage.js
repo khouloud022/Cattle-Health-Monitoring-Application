@@ -1,59 +1,62 @@
 import React from 'react';
 import './HomePage.css'; 
+import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const HomePage = () => {
-  
+  const navigate = useNavigate();
 
   const features = [
     {
       id: 1,
       title: 'Dashboard',
       icon: '📊',
-      route: '/Main',
+      route: '/Main2',
       color: '#4CAF50'
     },
     {
       id: 2,
-      title: 'Search a tender',
-      icon: '✉️',
-      route: '/tender',
+      title: 'View bids',
+      icon: '👁️',
+      route: '/Viewbids',
       color: '#2196F3'
     },
     {
       id: 3,
-      title: 'Place a bid',
-      icon: '📅',
-      route: '/bid',
+      title: 'Place bids',
+      icon: '✏️',
+      route: '/placebid',
       color: '#FF9800'
     },
     {
       id: 4,
-      title: 'Get remunerated',
-      icon: '⚙️',
-      route: '/award',
+      title: 'Consult Cattle Data',
+      icon: '👁️',
+      route: '/Consultop',
       color: '#9C27B0'
     },
     {
       id: 5,
       title: 'Profile',
-      icon: '📈',
-      route: '/profile',
+      icon: '👤',
+      route: '/Profile',
       color: '#F44336'
     },
     {
       id: 6,
       title: 'Log Out',
-      icon: '❓',
-      route: '/Log Out',
+      icon: '🚪',
+      route: '/SignIn',
       color: '#607D8B'
     }
   ];
 
   return (
-    <div className="main">
+    <div className="main-container">
+      <Header />
     <div className="home-page">
       
-        <h1 >Welcome back </h1>
+        <h1 >Welcome to Agriscan </h1>
      <br></br>
 
       <div className="features-grid">
@@ -62,6 +65,8 @@ const HomePage = () => {
             key={feature.id}
             className="feature-card"
             style={{ backgroundColor: feature.color }}
+            onClick={() => navigate(feature.route)}
+          
             
           >
             <div className="feature-icon">{feature.icon}</div>
@@ -71,6 +76,7 @@ const HomePage = () => {
       </div>
     </div>
     </div>
+
   );
 };
 

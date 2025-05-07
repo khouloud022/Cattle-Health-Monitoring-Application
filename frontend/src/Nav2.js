@@ -1,8 +1,5 @@
-//Nav.js
-
 import React, { useState } from 'react';
-
-
+import { Link } from 'react-router-dom';
 function Nav() {
    
     return (
@@ -15,7 +12,7 @@ function Nav() {
                             className="nav-img"
                             alt="dashboard"
                         />
-                        <h3>Dashboard</h3>
+                        <h3><Link to="/Main2" style={{ textDecoration: 'none', color: 'inherit' }}>Dashboard</Link></h3>
                     </div>
 
                     <div className="option2 nav-option" >
@@ -24,7 +21,7 @@ function Nav() {
                             className="nav-img"
                             alt="tenders"
                         />
-                        <h3>Tenders</h3>
+                        <h3><Link to="/Viewbids" style={{ textDecoration: 'none', color: 'inherit' }}>View bids</Link></h3>
                     </div>
 
                     <div className="nav-option option3" >
@@ -33,9 +30,18 @@ function Nav() {
                             className="nav-img"
                             alt="bids"
                         />
-                        <h3> Place bids </h3>
+                        <h3><Link to="/placebid" style={{ textDecoration: 'none', color: 'inherit' }}> Place bids </Link></h3>
                     </div>
-                    
+                     <div className="nav-option option4">
+                                                                <img
+                                                                    src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                                                                    className="nav-img"
+                                                                    alt="dashboard"
+                                                                />
+                                                                <h3>
+                                                                <Link to="/Consultop" style={{ textDecoration: 'none', color: 'inherit' }}>Consult cattle data</Link>
+                                                                </h3>
+                                                            </div>
      
 
                     <div className="nav-option option4">
@@ -53,16 +59,7 @@ function Nav() {
                             className="nav-img"
                             alt="blog"
                         />
-                        <h3>Profile</h3>
-                    </div>
-
-                    <div className="nav-option option6">
-                        <img
-                            src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
-                            className="nav-img"
-                            alt="settings"
-                        />
-                        <h3>Settings</h3>
+                        <h3><Link to="/Profile" style={{ textDecoration: 'none', color: 'inherit' }}> Profile </Link></h3>
                     </div>
 
                     <div className="nav-option logout">
@@ -71,7 +68,7 @@ function Nav() {
                             className="nav-img"
                             alt="logout"
                         />
-                        <h3>Logout</h3>
+                        <h3><Link to="/SignIn" style={{ textDecoration: 'none', color: 'inherit' }}>Logout</Link></h3>
                     </div>
                 </div>
             </nav>

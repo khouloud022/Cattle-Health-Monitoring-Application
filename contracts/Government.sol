@@ -15,9 +15,7 @@ contract Government {
         uint winningBidAmount;
     }
     
-    mapping(uint => Tender) public tenders;
-    mapping(uint => mapping(address => uint)) public bids; 
-    
+    mapping(uint => Tender) public tenders;  
     event TenderCreated(uint indexed id, string location, uint deadline);
     event TenderClosed(uint indexed id);
     event BidPlaced(uint indexed tenderId, address indexed bidder, uint amount);
@@ -61,25 +59,7 @@ contract Government {
         emit TenderClosed(_id);
     }
     
-    function placeBid(uint _tenderId, uint _amount) public {
-    require(tenders[_tenderId].isOpen, "L'appel d'offre est ferme");
-    require(block.timestamp < tenders[_tenderId].deadline, "La date limite est passee");
-    require(_amount > 0, "Le montant doit etre positif");
-    require(bids[_tenderId][msg.sender] == 0, "Vous avez deja soumissionne");
-
-    bids[_tenderId][msg.sender] = _amount;
-    emit BidPlaced(_tenderId, msg.sender, _amount);
-}
-    
-    function acceptBid(uint _tenderId, address _winner, uint _amount) public onlyGovernment {
-        require(!tenders[_tenderId].isOpen, "Tender must be closed first");
-        require(bids[_tenderId][_winner] == _amount, "Invalid bid amount");
-        
-        tenders[_tenderId].winningBidder = _winner;
-        tenders[_tenderId].winningBidAmount = _amount;
-        emit BidAccepted(_tenderId, _winner, _amount);
-    }
-    
+   
     function getActiveTenders() public view returns (Tender[] memory) {
         uint count = 0;
         for (uint i = 1; i <= tenderCounter; i++) {
@@ -99,8 +79,4 @@ contract Government {
         
         return activeTenders;
     }
-    
-    function getBidAmount(uint _tenderId, address _bidder) public view returns (uint) {
-        return bids[_tenderId][_bidder];
     }
-}

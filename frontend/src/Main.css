@@ -1,0 +1,242 @@
+/* Main Container Styles with gradient background */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+ 
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 150px;
+  transition: margin 0.3s ease;
+  
+}
+
+/* Glassmorphism Report Container */
+.report-container {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.report-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+/* Modern Header with gradient */
+.report-header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #4b49ac 0%, #3f0097 100%);
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.recent-Articles {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(to right, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Modern Button with hover animation */
+
+
+
+
+
+.report-body {
+  padding: 2rem;
+}
+
+/* Enhanced Table Design */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+tr:hover td {
+  background-color: rgba(75, 73, 172, 0.05);
+}
+
+/* Animated Close Button */
+.bg-red-500 {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-red-500::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bg-red-500:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(239, 68, 68, 0.3);
+}
+
+.bg-red-500:hover::after {
+  opacity: 1;
+}
+
+/* Empty State with Animation */
+.report-body > p {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .main {
+    margin-left: 80px;
+  }
+  
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .view {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+  
+  th, td {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 1rem;
+  }
+  
+  .report-header {
+    padding: 1rem;
+  }
+  
+  .recent-Articles {
+    font-size: 1.5rem;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .bg-red-500 {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Floating Animation for Table Rows */
+tr {
+  transition: all 0.3s ease;
+}
+
+tr:hover {
+  transform: translateX(5px);
+  box-shadow: 5px 0 15px rgba(75, 73, 172, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(75, 73, 172, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 73, 172, 0.6);
+}

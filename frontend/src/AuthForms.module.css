@@ -1,0 +1,465 @@
+
+.main-container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  margin-top: 70px; 
+  background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+}
+
+.contentWrapper {
+  display: flex;
+  width: 90%;
+  max-width: 1500px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.authFormContainer {
+  flex: 1;
+  padding: 5% 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.authForm {
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2c3e50;
+  font-size: 26px;
+  margin-bottom: 35px;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.logoImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #0f4f23;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  transform: rotate(15deg);
+}
+
+.loginTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.inputGroup {
+  margin-bottom: 25px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 15px;
+}
+
+.formInput {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.formInput:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  background-color: white;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #eee, transparent);
+  margin: 30px 0;
+  border: none;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  padding: 12px;
+  background-color: rgba(247, 215, 215, 0.5);
+  border-radius: 8px;
+  border-left: 4px solid #e74c3c;
+}
+
+.links {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.registerText {
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+.appDescription {
+  flex: 1;
+  padding: 8%;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.appTitle {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: white;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.descriptionText {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.featuresList {
+  margin-bottom: 40px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.featuresList li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.featuresList li:before {
+  content: "•";
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.appImageContainer {
+  margin-top: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.appImageContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.appImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.appImage:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contentWrapper {
+    width: 95%;
+    margin: 15px auto;
+  }
+  
+  .authFormContainer, .appDescription {
+    padding: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    margin-top: 60px;
+  }
+  
+  .contentWrapper {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  
+  .appDescription {
+    order: -1;
+    padding: 15% 8%;
+    text-align: center;
+  }
+  
+  .featuresList {
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .appTitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .authFormContainer {
+    padding: 12% 8%;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .logoImage {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .loginTitle {
+    font-size: 40px;
+  }
+  
+  .formInput {
+    padding: 12px 15px;
+  }
+  
+  .submitButton {
+    padding: 14px;
+  }
+}
+
+/* css de sign up */
+/* Ajouts spécifiques pour le formulaire d'inscription */
+
+.authForm h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.authForm h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  border-radius: 3px;
+}
+
+.formSelect {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+}
+
+.formSelect:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  background-color: white;
+  outline: none;
+}
+
+.switchForm {
+  text-align: center;
+  margin-top: 25px;
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.switchForm a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.switchForm a:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+/* Améliorations pour les groupes d'inputs */
+.inputGroup {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.inputGroup:focus-within label {
+  color: #3498db;
+}
+
+/* Animation pour les inputs */
+.formInput {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.formInput:focus {
+  transform: translateY(-2px);
+}
+
+/* Style pour le bouton d'inscription */
+.submitButton {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, #27ae60, #219653);
+  box-shadow: 0 6px 12px rgba(46, 204, 113, 0.3);
+}
+
+/* Effet de chargement pour le bouton */
+.submitButton.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submitButton.loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Améliorations responsive */
+@media (max-width: 768px) {
+  .authForm h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+  padding-bottom: 10px;
+  }
+  
+  .formInput, .formSelect {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+  
+  .submitButton {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .authForm h2 {
+    font-size: 22px;
+  }
+  
+  .switchForm {
+    font-size: 14px;
+  }
+}
